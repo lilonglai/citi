@@ -17,3 +17,19 @@ StandaloneSessionClusterEntrypoint
 
 TaskExecutor
 TaskManagerRunner
+
+
+org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
+org.apache.flink.streaming.api.environment.StreamExecutionEnvironment#socketTextStream(java.lang.String, int, char, long)
+
+org.apache.flink.streaming.api.datastream.DataStream
+
+org.apache.flink.api.java.tuple.Tuple2
+org.apache.flink.util.Collector
+org.apache.flink.util.Collector#collect
+
+org.apache.flink.streaming.api.datastream.KeyedStream
+
+
+org.apache.flink.api.java.ExecutionEnvironment
+
