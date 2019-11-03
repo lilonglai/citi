@@ -6,10 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="wiki-edits" />
+        <module name="flin_kafka" />
+        <module name="kfaka_send" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="flin_kafka" target="1.8" />
+      <module name="kfaka_send" target="1.8" />
       <module name="wiki-edits" target="1.8" />
     </bytecodeTargetLevel>
   </component>

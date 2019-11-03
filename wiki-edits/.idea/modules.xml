@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/flin_kafka/flin_kafka.iml" filepath="$PROJECT_DIR$/flin_kafka/flin_kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kfaka_send/kfaka_send.iml" filepath="$PROJECT_DIR$/kfaka_send/kfaka_send.iml" />
       <module fileurl="file://$PROJECT_DIR$/wiki-edits.iml" filepath="$PROJECT_DIR$/wiki-edits.iml" />
     </modules>
   </component>
