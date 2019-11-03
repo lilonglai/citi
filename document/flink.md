@@ -16,3 +16,7 @@ SessionClusterEntrypoint
 StandaloneSessionClusterEntrypoint
 
 TaskExecutor
+
+standalone cluster HA
+
+Yarn cluster HA

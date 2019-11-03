@@ -49,3 +49,6 @@ set KAFKA_DEBUG=Y
 set DEBUG_SUSPEND_FLAG=y
 
 
+org.apache.kafka.clients.consumer.KafkaConsumer
+
+

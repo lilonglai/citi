@@ -29,6 +29,7 @@
 - sudo docker pull tomcat
 - yum install wireshark
 - sudo  yum install wireshark-gnome
+- sudo yum install java-1.8.0-openjdk-devel.x86_64
 
 ###c++环境
 - yum install -y cmake
