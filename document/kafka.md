@@ -51,4 +51,14 @@ set DEBUG_SUSPEND_FLAG=y
 
 org.apache.kafka.clients.consumer.KafkaConsumer
 
+org.apache.flink.streaming.api.operators.StreamMap
+
+org.apache.flink.streaming.api.operators.TimestampedCollector
+
+org.apache.flink.streaming.runtime.tasks.OperatorChain.CopyingChainingOutput
+
+
+manually trigger
+auto commit mechanism
+
 
