@@ -2,7 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaRedisBenchmark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Jedis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flin_kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kfaka_send" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lettuce" charset="UTF-8" />
   </component>
 </project>

@@ -26,14 +26,13 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class Consumer extends ShutdownableThread {
+public class Consumer extends Thread {
     private final KafkaConsumer<Integer, String> consumer;
     private final String topic;
 
-    public Consumer(String topic) {
-        super("KafkaConsumerExample", false);
+    public Consumer() {
         Properties props = new Properties();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KafkaProperties.KAFKA_SERVER_URL + ":" + KafkaProperties.KAFKA_SERVER_PORT);
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.11.1:9093");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "DemoConsumer");
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
@@ -42,26 +41,22 @@ public class Consumer extends ShutdownableThread {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
 
         consumer = new KafkaConsumer<>(props);
-        this.topic = topic;
+        this.topic = "flink_request";
     }
 
     @Override
-    public void doWork() {
+    public void run() {
         consumer.subscribe(Collections.singletonList(this.topic));
-        ConsumerRecords<Integer, String> records = consumer.poll(Duration.ofSeconds(1));
-        for (ConsumerRecord<Integer, String> record : records) {
-            System.out.println("Received message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
+        while(true) {
+            ConsumerRecords<Integer, String> records = consumer.poll(Duration.ofSeconds(1));
+            for (ConsumerRecord<Integer, String> record : records) {
+                System.out.println("Received message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
+            }
         }
     }
 
-    @Override
-    public String name() {
-        return null;
+    public static void main(String[] args) {
+        Consumer consumerThread = new Consumer();
+        consumerThread.start();
     }
-
-    @Override
-    public boolean isInterruptible() {
-        return false;
-    }
-
 }

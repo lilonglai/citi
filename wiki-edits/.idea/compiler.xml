@@ -6,13 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flin_kafka" />
+        <module name="Jedis" />
+        <module name="lettuce" />
         <module name="kfaka_send" />
+        <module name="flin_kafka" />
+        <module name="JavaRedisBenchmark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="flin_kafka" target="1.8" />
+      <module name="JavaRedisBenchmark" target="1.8" />
+      <module name="Jedis" target="1.8" />
       <module name="kfaka_send" target="1.8" />
+      <module name="lettuce" target="1.8" />
       <module name="wiki-edits" target="1.8" />
     </bytecodeTargetLevel>
   </component>

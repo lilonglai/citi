@@ -26,6 +26,9 @@ under the License.
     <modules>
         <module>kfaka_send</module>
         <module>flin_kafka</module>
+        <module>Jedis</module>
+		<module>lettuce</module>
+        <module>JavaRedisBenchmark</module>
     </modules>
     <packaging>pom</packaging>
 
