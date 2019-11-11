@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76079100-cc60-434c-9898-f2837e6edeef" name="Default Changelist" comment="" />
+    <list default="true" id="76079100-cc60-434c-9898-f2837e6edeef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaRedisBenchmark/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaRedisBenchmark/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaRedisBenchmark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaRedisBenchmark/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile" beforeDir="false" afterPath="$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/kfaka_send/target/" />
@@ -26,8 +33,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/JedisBenchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-235">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="207">
+              <caret line="31" column="42" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
+              <folding>
+                <element signature="e#821#834#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,26 +45,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/LettuceBenchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="989">
               <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="95" column="66" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="66" />
+            <state relative-caret-position="552">
+              <caret line="78" column="35" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="92">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -62,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flin_kafka/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="1725">
               <caret line="75" column="34" selection-start-line="72" selection-end-line="129" selection-end-column="18" />
             </state>
           </provider>
@@ -71,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="161">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="34" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="37" />
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -92,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/ChainedOptionsBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+            <state relative-caret-position="247">
+              <caret line="146" column="23" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -101,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Throughput.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79114">
+            <state relative-caret-position="87929">
               <caret line="3823" column="24" selection-start-line="3823" selection-start-column="24" selection-end-line="3823" selection-end-column="24" />
             </state>
           </provider>
@@ -110,7 +120,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/OptionsBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="943">
               <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
             </state>
           </provider>
@@ -142,7 +152,11 @@
       <find>KafkaProducer</find>
       <find>offsetCommitMode</find>
       <find>slots</find>
+      <find>thread</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -169,10 +183,10 @@
         <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/JedisStudy.java" />
         <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/Constants.java" />
         <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/JedisBenchmark.java" />
-        <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java" />
         <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/LettuceBenchmark.java" />
-        <option value="$PROJECT_DIR$/JavaRedisBenchmark/pom.xml" />
         <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile" />
+        <option value="$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java" />
+        <option value="$PROJECT_DIR$/JavaRedisBenchmark/pom.xml" />
       </list>
     </option>
   </component>
@@ -190,16 +204,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="598" />
-    <option name="y" value="7" />
+    <option name="x" value="48" />
+    <option name="y" value="18" />
     <option name="width" value="1917" />
     <option name="height" value="1026" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,13 +276,6 @@
               <item name="wiki-edits" type="462c0819:PsiDirectoryNode" />
               <item name="JavaRedisBenchmark" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wiki-edits" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wiki-edits" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaRedisBenchmark" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wiki-edits" type="b2602c69:ProjectViewProjectNode" />
@@ -441,13 +450,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/kfaka_send/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -559,7 +568,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="598" y="7" width="1917" height="1026" extended-state="0" />
+    <frame x="48" y="18" width="1917" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -567,7 +576,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.19471948" side_tool="true" weight="0.23519826" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.8052805" visible="true" weight="0.21906267" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.8052805" visible="true" weight="0.21906267" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -968,13 +977,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_221/src.zip!/java/util/concurrent/CompletableFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_221/src.zip!/java/util/concurrent/CompletableFuture.java" />
     <entry file="file://$PROJECT_DIR$/Jedis/src/main/java/JedisMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -986,18 +989,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jedis/target/benchmark/jedis-Throughput.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lettuce/target/benchmark/lettuceAsync-Throughput.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Jedis/target/benchmark/jedis-Throughput.log" />
+    <entry file="file://$PROJECT_DIR$/lettuce/target/benchmark/lettuceAsync-Throughput.log" />
     <entry file="file://$PROJECT_DIR$/lettuce/src/main/java/benchmark/LettuceAsyncStudy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1087,43 +1080,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flin_kafka/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
+        <state relative-caret-position="1725">
           <caret line="75" column="34" selection-start-line="72" selection-end-line="129" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/OptionsBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/ChainedOptionsBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Throughput.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79114">
+        <state relative-caret-position="87929">
           <caret line="3823" column="24" selection-start-line="3823" selection-start-column="24" selection-end-line="3823" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/Constants.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/OptionsBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="37" />
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21-sources.jar!/org/openjdk/jmh/runner/options/ChainedOptionsBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="146" column="23" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/BenchmarkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="161">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1132,29 +1125,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/JedisBenchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="207">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
+          <folding>
+            <element signature="e#821#834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/java/benchmark/LettuceBenchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="989">
           <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="95" column="66" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaRedisBenchmark/src/main/resources/dockfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="552">
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="35" />
         </state>
       </provider>
     </entry>

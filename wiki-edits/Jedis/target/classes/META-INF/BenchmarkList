@@ -1,0 +1,1 @@
+JMH S 20 benchmark.JedisStudy S 42 benchmark.generated.JedisStudy_get_jmhTest S 3 get S 10 Throughput I 3 100 A 1 1 1 E I 1 1 E E I 1 2 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 

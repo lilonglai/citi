@@ -1,0 +1,5 @@
+FROM openjdk:8-alpine
+RUN mkdir /data
+COPY . /data
+WORKDIR /data
+CMD ["java","-jar JavaRedisBenchmark-0.1.jar"]
