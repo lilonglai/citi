@@ -1,0 +1,20 @@
+https://github.com/kubernetes/ingress-nginx
+
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/static/configmap.yaml
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/static/mandatory.yaml
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/static/namespace.yaml
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/static/rbac.yaml
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/static/with-rbac.yaml
+wget https://github.com/kubernetes/ingress-nginx/blob/nginx-0.26.1/deploy/baremetal/service-nodeport.yaml
+
+git clone https://github.com/kubernetes/ingress-nginx.git
+
+
+docker pull quay.mirrors.ustc.edu.cn/kubernetes-ingress-controller/nginx-ingress-controller:0.26.1
+
+
+quay.mirrors.ustc.edu.cn
+
+
+
+vim /etc/kubernetes/manifests/kube-apiserver.yaml

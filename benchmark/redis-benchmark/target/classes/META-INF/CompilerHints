@@ -1,0 +1,11 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/citi/gsp/smart/benchmark/JedisBenchmark.get
+inline,com/citi/gsp/smart/benchmark/JedisBenchmark.set
+inline,com/citi/gsp/smart/benchmark/JedisBenchmark.setup
+inline,com/citi/gsp/smart/benchmark/LettuceBenchmark.get
+inline,com/citi/gsp/smart/benchmark/LettuceBenchmark.set
+inline,com/citi/gsp/smart/benchmark/LettuceBenchmark.setup

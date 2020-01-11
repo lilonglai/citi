@@ -6,6 +6,9 @@ dontinline,*.*_thrpt_jmhStub
 inline,benchmark/JedisBenchmark.get
 inline,benchmark/JedisBenchmark.set
 inline,benchmark/JedisBenchmark.setup
+inline,benchmark/JedisBenchmark2.get
+inline,benchmark/JedisBenchmark2.set
+inline,benchmark/JedisBenchmark2.setup
 inline,benchmark/LettuceBenchmark.get
 inline,benchmark/LettuceBenchmark.set
 inline,benchmark/LettuceBenchmark.setup

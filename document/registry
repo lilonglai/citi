@@ -1,0 +1,15 @@
+docker pull registry
+
+ docker run -d -p 5000:5000 -v /docker/registry/data:/var/lib/registry --privileged=true --restart=always --name registry registry:latest
+
+
+vim  /etc/docker/daemon.json
+{
+  "registry-mirrors": ["https://6cr8af3y.mirror.aliyuncs.com"],
+  "insecure-registries":["192.168.11.150:5000"]
+}
+
+
+ docker push 192.168.11.150:5000/busybox:latest
+
+ docker pull 192.168.11.150:5000/busybox:latest

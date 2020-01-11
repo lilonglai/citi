@@ -1,0 +1,46 @@
+docker pull logstash
+docker run -i -t logstash:latest /bin/bash
+docker run --name my_logstash logstash:latest
+
+docker pull elasticsearch
+docker run -d -p 9200:9200 -p 9300:9300 --name="my_elasticsearch" -e "discovery.type=single-node" elasticsearch:6.4.0
+docker run -d -p 9200:9200 -p 9300:9300 --name="my_elasticsearch" -e "discovery.type=single-node" elasticsearch:latest
+
+docker pull kibana
+docker run --name my_kibana -p 5601:5601 -d -e ELASTICSEARCH_URL=http://192.168.11.128:9200 kibana:latest
+
+docker pull jenkins
+docker run -d -p 8002:8080 --name jenkins --restart=always jenkins
+
+docker pull jenkinsci/jenkins
+docker run -d -p 8002:8080 -m 1024m --name jenkins --restart=always jenkinsci/jenkins
+
+
+docker pull mysql
+docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql:5.7
+
+docker pull redis:latest
+docker run -itd --name redis -p 6379:6379 redis
+
+docker pull mongo:latest
+docker run -itd --name mongo -p 27017:27017 mongo
+
+docker pull nginx:latest
+docker run --name nginx -p 1080:80 -d nginx
+
+docker pull tomcat
+docker run --name tomcat -p 8080:8080 -d tomcat
+
+
+-Dcatalina.base="C:\Users\bella\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0" -Dcatalina.home="C:\kevin\apache-tomcat-8.0.18" -Dwtp.deploy="C:\Users\bella\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps" -Djava.endorsed.dirs="C:\kevin\apache-tomcat-8.0.18\endorsed"
+
+npdate asia.pool.ntp.org
+
+10k 3M
+ 20 000 000   3* 2000
+
+ 100K 20M
+ 30 000 000     20 * 300
+ memory control
+
+ ecs 内存影响

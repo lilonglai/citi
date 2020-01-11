@@ -69,7 +69,6 @@ yum install -y kubeadm kubelet
 cat > kubeadm.sh <<EOF
 #!/bin/bash
 
-## 使用如下脚本下载国内镜像，并修改tag为google的tag
 set -e
 
 KUBE_VERSION=v1.16.2
@@ -99,9 +98,6 @@ sh ./kubeadm.sh
 
 systemctl enable kubelet.service
 
-systemctl enable kubelet.service
-
-
 
 kubeadm init  --kubernetes-version=v1.16.2 --apiserver-advertise-address=192.168.11.150 --pod-network-cidr=10.244.0.0/16 --service-cidr=10.1.0.0/16
 
@@ -118,7 +114,6 @@ set -e
 
 FLANNEL_VERSION=v0.11.0
 
-# 在这里修改源
 QUAY_URL=quay.io/coreos
 QINIU_URL=quay-mirror.qiniu.com/coreos
 
@@ -143,9 +138,6 @@ KUBELET_KUBEADM_ARGS="--cgroup-driver=systemd --network-plugin=cni --pod-infra-c
 EOF
 
 systemctl restart kubelet
-
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documentation/kube-flannel.yml
-
 
 
 

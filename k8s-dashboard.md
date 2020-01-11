@@ -21,3 +21,11 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
   apiGroup: rbac.authorization.k8s.io
+
+
+
+  kubectl describe secret dashboard -n kube-system
+
+
+  kubectl run -it --image=busybox:1.28.3 --restart=Never dns-test /bin/sh
+  

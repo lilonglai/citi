@@ -1,4 +1,6 @@
 JMH S 26 benchmark.LettuceBenchmark S 48 benchmark.generated.LettuceBenchmark_get_jmhTest S 3 get S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
-JMH S 24 benchmark.JedisBenchmark S 46 benchmark.generated.JedisBenchmark_set_jmhTest S 3 set S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
-JMH S 24 benchmark.JedisBenchmark S 46 benchmark.generated.JedisBenchmark_get_jmhTest S 3 get S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 24 benchmark.JedisBenchmark S 46 benchmark.generated.JedisBenchmark_set_jmhTest S 3 set S 10 Throughput I 3 200 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 25 benchmark.JedisBenchmark2 S 47 benchmark.generated.JedisBenchmark2_set_jmhTest S 3 set S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
 JMH S 26 benchmark.LettuceBenchmark S 48 benchmark.generated.LettuceBenchmark_set_jmhTest S 3 set S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 24 benchmark.JedisBenchmark S 46 benchmark.generated.JedisBenchmark_get_jmhTest S 3 get S 10 Throughput I 3 200 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 25 benchmark.JedisBenchmark2 S 47 benchmark.generated.JedisBenchmark2_get_jmhTest S 3 get S 10 Throughput I 3 100 A 1 1 1 E I 1 2 E E I 1 5 T 6 600 ms E E E E E E E E U 12 MILLISECONDS E E 

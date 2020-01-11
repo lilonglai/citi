@@ -1,0 +1,4 @@
+redis
+maxmemory-policy volatile-lru
+appendfsync everysec
+aof-use-rdb-preamble yes

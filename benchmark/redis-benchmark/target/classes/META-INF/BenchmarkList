@@ -1,0 +1,4 @@
+JMH S 43 com.citi.gsp.smart.benchmark.JedisBenchmark S 65 com.citi.gsp.smart.benchmark.generated.JedisBenchmark_get_jmhTest S 3 get S 10 Throughput I 2 32 A 1 1 1 E I 1 2 T 3 3 s E I 1 5 T 4 10 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 45 com.citi.gsp.smart.benchmark.LettuceBenchmark S 67 com.citi.gsp.smart.benchmark.generated.LettuceBenchmark_set_jmhTest S 3 set S 10 Throughput I 2 32 A 1 1 1 E I 1 2 T 3 3 s E I 1 5 T 4 10 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 45 com.citi.gsp.smart.benchmark.LettuceBenchmark S 67 com.citi.gsp.smart.benchmark.generated.LettuceBenchmark_get_jmhTest S 3 get S 10 Throughput I 2 32 A 1 1 1 E I 1 2 T 3 3 s E I 1 5 T 4 10 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 43 com.citi.gsp.smart.benchmark.JedisBenchmark S 65 com.citi.gsp.smart.benchmark.generated.JedisBenchmark_set_jmhTest S 3 set S 10 Throughput I 2 32 A 1 1 1 E I 1 2 T 3 3 s E I 1 5 T 4 10 s E I 1 1 E E E E E E U 7 SECONDS E E 

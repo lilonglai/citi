@@ -36,6 +36,8 @@ sudo hwclock -w
 master
 yum install -y etcd kubernetes-master ntp flannel
 
+ls /etc/kubernetes/pki/etcd
+
 vi /etc/etcd/etcd.conf
 ETCD_DATA_DIR="/var/lib/etcd/default.etcd"
 ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
@@ -187,6 +189,8 @@ etcdctl ls /atomic.io/network/subnets
 kubectl exec -it nginx-controller-6jcqf /bin/bash
 
 
+
+etcdctl --endpoint http://192.168.11.150:2379 --debug member list 
 
 yum install -y etcd docker kubernetes flannel
 

@@ -1,0 +1,415 @@
+typedef PyTupleObject PyStructSequence;
+
+typedef struct {
+    PyObject_VAR_HEAD
+    PyObject *ob_item[1];
+
+    /* ob_item contains space for 'ob_size' elements.
+     * Items must normally not be NULL, except during construction when
+     * the tuple is not yet visible outside the function that builds it.
+     */
+} PyTupleObject;
+
+
+typedef struct {
+    PyObject_VAR_HEAD
+    /* Vector of pointers to list elements.  list[0] is ob_item[0], etc. */
+    PyObject **ob_item;
+
+    /* ob_item contains space for 'allocated' elements.  The number
+     * currently in use is ob_size.
+     * Invariants:
+     *     0 <= ob_size <= allocated
+     *     len(list) == ob_size
+     *     ob_item == NULL implies ob_size == allocated == 0
+     * list.sort() temporarily sets allocated to -1 to detect mutations.
+     *
+     * Items must normally not be NULL, except during construction when
+     * the list is not yet visible outside the function that builds it.
+     */
+    Py_ssize_t allocated;
+} PyListObject;
+
+typedef struct {
+    PyObject_HEAD
+    Py_ssize_t it_index;
+    PyObject *it_seq; /* Set to NULL when iterator is exhausted */
+} seqiterobject;
+
+
+typedef struct {
+    PyObject_HEAD
+    double ob_fval;
+} PyFloatObject;
+
+typedef unsigned short digit;
+
+struct _longobject {
+	PyObject_VAR_HEAD
+	digit ob_digit[1];
+};
+
+typedef struct _longobject PyLongObject;
+
+
+
+typedef struct {
+    PyObject_HEAD
+    Py_ssize_t ma_used;
+    PyDictKeysObject *ma_keys;
+    PyObject **ma_values;
+} PyDictObject;
+
+
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *start;
+    PyObject *stop;
+    PyObject *step;
+    PyObject *length;
+} rangeobject;
+
+
+typedef struct {
+    double real;
+    double imag;
+} Py_complex;
+
+
+typedef struct {
+    PyObject_VAR_HEAD
+    Py_ssize_t ob_alloc; /* How many bytes allocated in ob_bytes */
+    char *ob_bytes;      /* Physical backing buffer */
+    char *ob_start;      /* Logical start inside ob_bytes */
+    /* XXX(nnorwitz): should ob_exports be Py_ssize_t? */
+    int ob_exports;      /* How many buffer exports */
+} PyByteArrayObject;
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *im_func;   /* The callable object implementing the method */
+    PyObject *im_self;   /* The instance it is bound to */
+    PyObject *im_weakreflist; /* List of weak references */
+} PyMethodObject;
+
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *func_code;	/* A code object, the __code__ attribute */
+    PyObject *func_globals;	/* A dictionary (other mappings won't do) */
+    PyObject *func_defaults;	/* NULL or a tuple */
+    PyObject *func_kwdefaults;	/* NULL or a dict */
+    PyObject *func_closure;	/* NULL or a tuple of cell objects */
+    PyObject *func_doc;		/* The __doc__ attribute, can be anything */
+    PyObject *func_name;	/* The __name__ attribute, a string object */
+    PyObject *func_dict;	/* The __dict__ attribute, a dict or NULL */
+    PyObject *func_weakreflist;	/* List of weak references */
+    PyObject *func_module;	/* The __module__ attribute, can be anything */
+    PyObject *func_annotations;	/* Annotations, a dict or NULL */
+    PyObject *func_qualname;    /* The qualified name */
+
+    /* Invariant:
+     *     func_closure contains the bindings for func_code->co_freevars, so
+     *     PyTuple_Size(func_closure) == PyCode_GetNumFree(func_code)
+     *     (func_closure may be NULL if PyCode_GetNumFree(func_code) == 0).
+     */
+} PyFunctionObject;
+
+
+
+#define _PyGenObject_HEAD(prefix)                                           \
+    PyObject_HEAD                                                           \
+    /* Note: gi_frame can be NULL if the generator is "finished" */         \
+    struct _frame *prefix##_frame;                                          \
+    /* True if generator is being executed. */                              \
+    char prefix##_running;                                                  \
+    /* The code object backing the generator */                             \
+    PyObject *prefix##_code;                                                \
+    /* List of weak reference. */                                           \
+    PyObject *prefix##_weakreflist;                                         \
+    /* Name of the generator. */                                            \
+    PyObject *prefix##_name;                                                \
+    /* Qualified name of the generator. */                                  \
+    PyObject *prefix##_qualname;
+
+typedef struct {
+    /* The gi_ prefix is intended to remind of generator-iterator. */
+    _PyGenObject_HEAD(gi)
+} PyGenObject;
+
+
+
+
+typedef struct {
+    PyObject_HEAD
+    int co_argcount;		/* #arguments, except *args */
+    int co_kwonlyargcount;	/* #keyword only arguments */
+    int co_nlocals;		/* #local variables */
+    int co_stacksize;		/* #entries needed for evaluation stack */
+    int co_flags;		/* CO_..., see below */
+    PyObject *co_code;		/* instruction opcodes */
+    PyObject *co_consts;	/* list (constants used) */
+    PyObject *co_names;		/* list of strings (names used) */
+    PyObject *co_varnames;	/* tuple of strings (local variable names) */
+    PyObject *co_freevars;	/* tuple of strings (free variable names) */
+    PyObject *co_cellvars;      /* tuple of strings (cell variable names) */
+    /* The rest aren't used in either hash or comparisons, except for
+       co_name (used in both) and co_firstlineno (used only in
+       comparisons).  This is done to preserve the name and line number
+       for tracebacks and debuggers; otherwise, constant de-duplication
+       would collapse identical functions/lambdas defined on different lines.
+    */
+    unsigned char *co_cell2arg; /* Maps cell vars which are arguments. */
+    PyObject *co_filename;	/* unicode (where it was loaded from) */
+    PyObject *co_name;		/* unicode (name, for reference) */
+    int co_firstlineno;		/* first source line number */
+    PyObject *co_lnotab;	/* string (encoding addr<->lineno mapping) See
+				   Objects/lnotab_notes.txt for details. */
+    void *co_zombieframe;     /* for optimization only (see frameobject.c) */
+    PyObject *co_weakreflist;   /* to support weakrefs to code objects */
+} PyCodeObject;
+
+
+typedef struct {
+	PyObject_HEAD
+	PyObject *ob_ref;	/* Content of the cell or NULL when empty */
+} PyCellObject;
+
+
+
+
+typedef struct {
+    PyObject_HEAD
+    Py_ssize_t en_index;           /* current index of enumeration */
+    PyObject* en_sit;          /* secondary iterator of enumeration */
+    PyObject* en_result;           /* result tuple  */
+    PyObject* en_longindex;        /* index for sequences >= PY_SSIZE_T_MAX */
+} enumobject;
+
+
+
+typedef struct _object {
+    _PyObject_HEAD_EXTRA
+    Py_ssize_t ob_refcnt;
+    struct _typeobject *ob_type;
+} PyObject;
+
+typedef struct {
+    PyObject ob_base;
+    Py_ssize_t ob_size; /* Number of items in variable part */
+} PyVarObject;
+
+
+#define _PyObject_HEAD_EXTRA            \
+    struct _object *_ob_next;           \
+    struct _object *_ob_prev;
+
+
+#define PyObject_HEAD                   PyObject ob_base;
+
+
+
+
+
+typedef struct _frame {
+    PyObject_VAR_HEAD
+    struct _frame *f_back;      /* previous frame, or NULL */
+    PyCodeObject *f_code;       /* code segment */
+    PyObject *f_builtins;       /* builtin symbol table (PyDictObject) */
+    PyObject *f_globals;        /* global symbol table (PyDictObject) */
+    PyObject *f_locals;         /* local symbol table (any mapping) */
+    PyObject **f_valuestack;    /* points after the last local */
+    /* Next free slot in f_valuestack.  Frame creation sets to f_valuestack.
+       Frame evaluation usually NULLs it, but a frame that yields sets it
+       to the current stack top. */
+    PyObject **f_stacktop;
+    PyObject *f_trace;          /* Trace function */
+
+    /* In a generator, we need to be able to swap between the exception
+       state inside the generator and the exception state of the calling
+       frame (which shouldn't be impacted when the generator "yields"
+       from an except handler).
+       These three fields exist exactly for that, and are unused for
+       non-generator frames. See the save_exc_state and swap_exc_state
+       functions in ceval.c for details of their use. */
+    PyObject *f_exc_type, *f_exc_value, *f_exc_traceback;
+    /* Borrowed reference to a generator, or NULL */
+    PyObject *f_gen;
+
+    int f_lasti;                /* Last instruction if called */
+    /* Call PyFrame_GetLineNumber() instead of reading this field
+       directly.  As of 2.3 f_lineno is only valid when tracing is
+       active (i.e. when f_trace is set).  At other times we use
+       PyCode_Addr2Line to calculate the line from the current
+       bytecode index. */
+    int f_lineno;               /* Current line number */
+    int f_iblock;               /* index in f_blockstack */
+    char f_executing;           /* whether the frame is still executing */
+    PyTryBlock f_blockstack[CO_MAXBLOCKS]; /* for try and loop blocks */
+    PyObject *f_localsplus[1];  /* locals+stack, dynamically sized */
+} PyFrameObject;
+
+
+struct PyMethodDef {
+    const char  *ml_name;   /* The name of the built-in function/method */
+    PyCFunction ml_meth;    /* The C function that implements it */
+    int         ml_flags;   /* Combination of METH_xxx flags, which mostly
+                               describe the args expected by the C func */
+    const char  *ml_doc;    /* The __doc__ attribute, or NULL */
+};
+typedef struct PyMethodDef PyMethodDef;
+
+
+typedef struct {
+    PyObject_HEAD
+    PyMethodDef *m_ml; /* Description of the C function to call */
+    PyObject    *m_self; /* Passed as 'self' arg to the C func, can be NULL */
+    PyObject    *m_module; /* The __module__ attribute, can be anything */
+    PyObject    *m_weakreflist; /* List of weak references */
+} PyCFunctionObject;
+
+typedef PyObject *(*PyCFunction)(PyObject *, PyObject *);
+typedef PyObject *(*PyCFunctionWithKeywords)(PyObject *, PyObject *,
+                                             PyObject *);
+typedef PyObject *(*PyNoArgsFunction)(PyObject *);
+
+
+
+typedef struct {
+    PyObject_HEAD
+
+    Py_ssize_t fill;            /* Number active and dummy entries*/
+    Py_ssize_t used;            /* Number active entries */
+
+    /* The table contains mask + 1 slots, and that's a power of 2.
+     * We store the mask instead of the size because the mask is more
+     * frequently needed.
+     */
+    Py_ssize_t mask;
+
+    /* The table points to a fixed-size smalltable for small tables
+     * or to additional malloc'ed memory for bigger tables.
+     * The table pointer is never NULL which saves us from repeated
+     * runtime null-tests.
+     */
+    setentry *table;
+    Py_hash_t hash;             /* Only used by frozenset objects */
+    Py_ssize_t finger;          /* Search finger for pop() */
+
+    setentry smalltable[PySet_MINSIZE];
+    PyObject *weakreflist;      /* List of weak references */
+} PySetObject;
+
+
+typedef struct {
+    PyObject *key;
+    Py_hash_t hash;             /* Cached hash code of the key */
+} setentry;
+
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *start, *stop, *step;	/* not NULL */
+} PySliceObject;
+
+
+typedef struct {
+    PyObject_HEAD
+    Py_ssize_t it_index;
+    PyObject *it_seq;    /* Set to NULL when iterator is exhausted */
+} unicodeiterobject;
+
+
+enum PyUnicode_Kind {
+/* String contains only wstr byte characters.  This is only possible
+   when the string was created with a legacy API and _PyUnicode_Ready()
+   has not been called yet.  */
+    PyUnicode_WCHAR_KIND = 0,
+/* Return values of the PyUnicode_KIND() macro: */
+    PyUnicode_1BYTE_KIND = 1,
+    PyUnicode_2BYTE_KIND = 2,
+    PyUnicode_4BYTE_KIND = 4
+};
+
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *md_dict;
+    struct PyModuleDef *md_def;
+    void *md_state;
+    PyObject *md_weaklist;
+    PyObject *md_name;  /* for logging purposes after md_dict is cleared */
+} PyModuleObject;
+
+typedef struct PyModuleDef{
+  PyModuleDef_Base m_base;
+  const char* m_name;
+  const char* m_doc;
+  Py_ssize_t m_size;
+  PyMethodDef *m_methods;
+  struct PyModuleDef_Slot* m_slots;
+  traverseproc m_traverse;
+  inquiry m_clear;
+  freefunc m_free;
+}PyModuleDef;
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *ns_dict;
+} _PyNamespaceObject;
+
+
+
+typedef struct {
+    PyObject_HEAD
+    PyObject *md_dict;
+    struct PyModuleDef *md_def;
+    void *md_state;
+    PyObject *md_weaklist;
+    PyObject *md_name;  /* for logging purposes after md_dict is cleared */
+} PyModuleObject;
+
+
+PyTypeObject PyModule_Type = {
+    PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    "module",                                   /* tp_name */
+    sizeof(PyModuleObject),                     /* tp_size */
+    0,                                          /* tp_itemsize */
+    (destructor)module_dealloc,                 /* tp_dealloc */
+    0,                                          /* tp_print */
+    0,                                          /* tp_getattr */
+    0,                                          /* tp_setattr */
+    0,                                          /* tp_reserved */
+    (reprfunc)module_repr,                      /* tp_repr */
+    0,                                          /* tp_as_number */
+    0,                                          /* tp_as_sequence */
+    0,                                          /* tp_as_mapping */
+    0,                                          /* tp_hash */
+    0,                                          /* tp_call */
+    0,                                          /* tp_str */
+    (getattrofunc)module_getattro,              /* tp_getattro */
+    PyObject_GenericSetAttr,                    /* tp_setattro */
+    0,                                          /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HAVE_GC |
+        Py_TPFLAGS_BASETYPE,                    /* tp_flags */
+    module_doc,                                 /* tp_doc */
+    (traverseproc)module_traverse,              /* tp_traverse */
+    (inquiry)module_clear,                      /* tp_clear */
+    0,                                          /* tp_richcompare */
+    offsetof(PyModuleObject, md_weaklist),      /* tp_weaklistoffset */
+    0,                                          /* tp_iter */
+    0,                                          /* tp_iternext */
+    module_methods,                             /* tp_methods */
+    module_members,                             /* tp_members */
+    0,                                          /* tp_getset */
+    0,                                          /* tp_base */
+    0,                                          /* tp_dict */
+    0,                                          /* tp_descr_get */
+    0,                                          /* tp_descr_set */
+    offsetof(PyModuleObject, md_dict),          /* tp_dictoffset */
+    (initproc)module_init,                      /* tp_init */
+    PyType_GenericAlloc,                        /* tp_alloc */
+    PyType_GenericNew,                          /* tp_new */
+    PyObject_GC_Del,                            /* tp_free */
+};

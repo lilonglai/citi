@@ -1,0 +1,42 @@
+https://www.qemu.org/
+
+http://blog.chinaunix.net/uid-14735472-id-3330285.html
+
+https://www.cnblogs.com/welhzh/p/4521196.html
+
+https://blog.csdn.net/huiyuyang_fish/article/details/8731066
+
+yum install dev86*
+
+yum install binutils*
+
+alias gas="as"
+
+
+ln -s /usr/bin/as /usr/bin/gas
+
+a eax
+b ebx
+c ecx
+d edx
+s esi
+q eax, ebx, ecx, edx
+r eax，ebx，ecx，edx，esi，edi
+m memory
+
+$1 数字
+%1 第一个数字
+
+
+linux
+libc
+libc++
+gcc
+
+
+__USE_POSIX
+
+__USE_BSD
+
+
+
