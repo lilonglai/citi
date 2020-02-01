@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint name="UserWebService" implementation="com.lex.webservice.UserWebService"
+              url-pattern="/ws/UserWebService" />
+    <endpoint name="StudentWebService" implementation="com.lex.webservice.StudentWebService"
+              url-pattern="/ws/StudentWebService" />
+</endpoints>
