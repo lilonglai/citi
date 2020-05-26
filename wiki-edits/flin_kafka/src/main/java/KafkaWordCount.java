@@ -15,25 +15,29 @@ public class KafkaWordCount {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
+        env.setBufferTimeout(200);
         // 获取数据源
         Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", "192.168.11.1:9093,192.168.11.1:9094");
+        properties.setProperty("bootstrap.servers", "localhost:9092");
         properties.setProperty("group.id", "flink_consumer4");
         FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<>("flink_request", new SimpleStringSchema(), properties);
         //consumer.setStartFromEarliest();
-        consumer.setStartFromGroupOffsets();
+        consumer.setStartFromLatest();
 
         Properties produceProperties = new Properties();
-        produceProperties.setProperty("bootstrap.servers", "192.168.11.1:9093,192.168.11.1:9094");
+        produceProperties.setProperty("bootstrap.servers", "localhost:9092");
         FlinkKafkaProducer<Response> producer = new FlinkKafkaProducer<>("flink_response",new ResponseSerializationSchema(), produceProperties, FlinkKafkaProducer.Semantic.EXACTLY_ONCE);
 
         env.addSource(consumer).map(( str)->{
+            long startTime = System.currentTimeMillis();
             String message = str;
             int index = message.lastIndexOf(" ");
 
             Request request = new Request();
             request.id = message.substring(index+1);
             request.message =  message.substring(0, index);
+            long endTime = System.currentTimeMillis();
+            System.out.println("1," + request.id + "," + startTime + "," + (endTime - startTime));
             return request;
         }).map(request ->{
             return request;
@@ -59,7 +63,8 @@ public class KafkaWordCount {
                 response.count = 1;
                 return response;
             }
-        }).setParallelism(4).keyBy(r -> r.id).timeWindow(Time.seconds(5))
+        }).setParallelism(2).keyBy(r -> r.id).timeWindow(Time.milliseconds(400))
+                .trigger(new ResponseTrigger())
                 .aggregate(new AggregateFunction<Response, Response, Response>() {
                     @Override
                     public Response createAccumulator() {
@@ -98,7 +103,7 @@ public class KafkaWordCount {
                     }
                 }).addSink(producer);
         // 提交任务
-        env.execute("Java Word from SocketTextStream Example");
+        env.execute("Kafka Example");
     }
 
 

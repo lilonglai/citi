@@ -1,15 +1,33 @@
 import io.lettuce.core.RedisURI;
+import io.lettuce.core.cluster.ClusterClientOptions;
+import io.lettuce.core.cluster.ClusterTopologyRefreshOptions;
 import io.lettuce.core.cluster.RedisClusterClient;
 import io.lettuce.core.cluster.api.StatefulRedisClusterConnection;
 import io.lettuce.core.cluster.api.sync.RedisAdvancedClusterCommands;
 
+import java.time.Duration;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class Lettuce {
     public static void main(String[] args) {
         RedisURI node1 = RedisURI.create("192.168.11.128", 9001);
 
         RedisClusterClient clusterClient = RedisClusterClient.create(Arrays.asList(node1));
+        ClusterTopologyRefreshOptions topologyRefreshOptions;
+        /*ClusterTopologyRefreshOptions topologyRefreshOptions = ClusterTopologyRefreshOptions.builder()
+                .enablePeriodicRefresh(10, TimeUnit.MINUTES)
+                .build();
+         */
+
+        topologyRefreshOptions = ClusterTopologyRefreshOptions.builder()
+                .enablePeriodicRefresh()
+                .enableAllAdaptiveRefreshTriggers()
+                .build();
+
+        clusterClient.setOptions(ClusterClientOptions.builder()
+                .topologyRefreshOptions(topologyRefreshOptions)
+                .build());
         StatefulRedisClusterConnection<String, String> connection = clusterClient.connect();
         RedisAdvancedClusterCommands<String, String> syncCommands = connection.sync();
         syncCommands.set("foo", "bar");

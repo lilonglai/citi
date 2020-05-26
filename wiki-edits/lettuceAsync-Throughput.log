@@ -1,0 +1,59 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit Server VM, 25.221-b11
+# VM invoker: C:\kevin\Java\jdk1.8.0_221\jre\bin\java.exe
+# VM options: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64443,suspend=y,server=n -javaagent:C:\Users\bella\.IdeaIC2019.1\system\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 5 iterations, 600 ms each
+# Timeout: 10 min per iteration
+# Threads: 100 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: benchmark.LettuceBenchmark.get
+
+# Run progress: 0.00% complete, ETA 00:03:50
+# Fork: 1 of 5
+ERROR: transport error 202: connect failed: Connection refused
+ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)
+JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [debugInit.c:750]
+<forked VM failed with exit code 2>
+<stdout last='20 lines'>
+</stdout>
+<stderr last='20 lines'>
+ERROR: transport error 202: connect failed: Connection refused
+ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)
+JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [debugInit.c:750]
+</stderr>
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit Server VM, 25.221-b11
+# VM invoker: C:\kevin\Java\jdk1.8.0_221\jre\bin\java.exe
+# VM options: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64443,suspend=y,server=n -javaagent:C:\Users\bella\.IdeaIC2019.1\system\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 5 iterations, 600 ms each
+# Timeout: 10 min per iteration
+# Threads: 100 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: benchmark.LettuceBenchmark.set
+
+# Run progress: 0.00% complete, ETA 00:03:50
+# Fork: 1 of 5
+ERROR: transport error 202: connect failed: Connection refused
+ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)
+JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [debugInit.c:750]
+<forked VM failed with exit code 2>
+<stdout last='20 lines'>
+</stdout>
+<stderr last='20 lines'>
+ERROR: transport error 202: connect failed: Connection refused
+ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)
+JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [debugInit.c:750]
+</stderr>
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units

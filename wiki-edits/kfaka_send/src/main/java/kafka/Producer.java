@@ -34,7 +34,7 @@ public class Producer extends Thread {
 
     public Producer(Boolean isAsync) {
         Properties props = new Properties();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.11.1:9093");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.CLIENT_ID_CONFIG, "DemoProducer");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, IntegerSerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
@@ -46,7 +46,7 @@ public class Producer extends Thread {
     public void run() {
         int messageNo = 1;
         int i = 1;
-        while (i<= 200) {
+        while (i<= 100) {
             String messageStr = "Hello World This Is Kevin From Citi Company " + messageNo;
             long startTime = System.currentTimeMillis();
             if (isAsync) { // Send asynchronously
@@ -63,14 +63,19 @@ public class Producer extends Thread {
                     e.printStackTrace();
                 }
             }
+
+            long endTime = System.currentTimeMillis();
+            System.out.println(messageNo+ "," + startTime + "," + (endTime - startTime));
+
             ++messageNo;
             i++;
         }
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         Producer producer = new Producer(true);
         producer.start();
+        Thread.sleep(3000);
     }
 }

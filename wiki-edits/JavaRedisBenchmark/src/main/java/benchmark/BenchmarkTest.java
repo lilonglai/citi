@@ -8,7 +8,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 public class BenchmarkTest {
     public static void main(String[] args) throws RunnerException {
         Options options = new OptionsBuilder().include(JedisBenchmark.class.getSimpleName()).include(LettuceBenchmark.class.getSimpleName())
-                .output("Throughput.log").forks(1).build();
+                .output("Throughput.log").build();
         new Runner(options).run();
     }
 }
