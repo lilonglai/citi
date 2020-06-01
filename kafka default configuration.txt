@@ -1,0 +1,153 @@
+optimization 
+1. ajust the parallism for rule check, make it even bigger.
+2. decreate the parallism for flink consumer. it is waster resource.
+调整， 分区
+https://www.jianshu.com/p/dbbca800f607
+
+values = {HashMap@1496}  size = 62
+ "metric.reporters" -> {Collections$EmptyList@1565}  size = 0
+ "metadata.max.age.ms" -> {Long@1567} 300000
+ "reconnect.backoff.max.ms" -> {Long@1569} 1000
+ "reconnect.backoff.ms" -> {Long@1571} 50
+ "sasl.kerberos.ticket.renew.window.factor" -> {Double@1573} 0.8
+ "bootstrap.servers" -> {Arrays$ArrayList@1575}  size = 1
+ "metrics.recording.level" -> "INFO"
+ "ssl.keystore.type" -> "JKS"
+ "sasl.mechanism" -> "GSSAPI"
+ "max.block.ms" -> {Long@1583} 60000
+ "interceptor.classes" -> {Collections$EmptyList@1565}  size = 0
+ "ssl.truststore.password" -> null
+ "client.id" -> "DemoProducer"
+ "ssl.endpoint.identification.algorithm" -> "https"
+ "request.timeout.ms" -> {Integer@1591} 30000
+ "sasl.login.refresh.buffer.seconds" -> {Short@1593} 300
+ "acks" -> "1"
+ "transaction.timeout.ms" -> {Integer@1596} 60000
+ "receive.buffer.bytes" -> {Integer@1598} 32768
+ "sasl.login.class" -> null
+ "ssl.truststore.type" -> "JKS"
+ "retries" -> {Integer@1602} 2147483647
+ "ssl.truststore.location" -> null
+ "client.dns.lookup" -> "default"
+ "ssl.keystore.password" -> null
+ "send.buffer.bytes" -> {Integer@1608} 131072
+ "compression.type" -> "none"
+ "enable.idempotence" -> {Boolean@1612} false
+ "sasl.login.refresh.window.factor" -> {Double@1614} 0.8
+ "sasl.login.refresh.min.period.seconds" -> {Short@1616} 60
+ "delivery.timeout.ms" -> {Integer@1618} 120000
+ "retry.backoff.ms" -> {Long@1620} 100
+ "ssl.secure.random.implementation" -> null
+ "sasl.kerberos.kinit.cmd" -> "/usr/bin/kinit"
+ "buffer.memory" -> {Long@1625} 33554432
+ "key.serializer" -> {Class@688} "class org.apache.kafka.common.serialization.IntegerSerializer"
+ "sasl.kerberos.service.name" -> null
+ "sasl.kerberos.ticket.renew.jitter" -> {Double@1629} 0.05
+ "transactional.id" -> null
+ "ssl.trustmanager.algorithm" -> "PKIX"
+ "ssl.key.password" -> null
+ "sasl.jaas.config" -> null
+ "sasl.client.callback.handler.class" -> null
+ "sasl.kerberos.min.time.before.relogin" -> {Long@1637} 60000
+ "connections.max.idle.ms" -> {Long@1639} 540000
+ "max.in.flight.requests.per.connection" -> {Integer@1641} 5
+ "metrics.num.samples" -> {Integer@1643} 2
+ "ssl.protocol" -> "TLS"
+ "ssl.provider" -> null
+ "ssl.enabled.protocols" -> {Arrays$ArrayList@1648}  size = 3
+ "batch.size" -> {Integer@1650} 16384
+ "ssl.keystore.location" -> null
+ "ssl.cipher.suites" -> null
+ "security.protocol" -> "PLAINTEXT"
+ "max.request.size" -> {Integer@1656} 1048576
+ "value.serializer" -> {Class@689} "class org.apache.kafka.common.serialization.StringSerializer"
+ "ssl.keymanager.algorithm" -> "SunX509"
+ "sasl.login.callback.handler.class" -> null
+ "metrics.sample.window.ms" -> {Long@1662} 30000
+ "partitioner.class" -> {Class@1089} "class org.apache.kafka.clients.producer.internals.DefaultPartitioner"
+ "sasl.login.refresh.window.jitter" -> {Double@1665} 0.05
+ "linger.ms" -> {Long@1667} 0
+ 
+ 
+ 
+ 
+ max.partition.fetch.bytes
+ max.poll.records
+ 	 
+	 
+	 heartbeat.interval.ms(5s)
+	 fetch.max.wait.ms
+	·fetch.min.bytes
+	max.poll.interval.ms
+	
+
+
+"metric.reporters" -> {Collections$EmptyList@789}  size = 0
+"metadata.max.age.ms" -> {Long@791} 300000
+"reconnect.backoff.max.ms" -> {Long@793} 1000
+"partition.assignment.strategy" -> {Collections$SingletonList@795}  size = 1
+"reconnect.backoff.ms" -> {Long@797} 50
+"sasl.kerberos.ticket.renew.window.factor" -> {Double@799} 0.8
+"max.partition.fetch.bytes" -> {Integer@801} 1048576
+"bootstrap.servers" -> {Arrays$ArrayList@803}  size = 1
+"metrics.recording.level" -> "INFO"
+"ssl.keystore.type" -> "JKS"
+"enable.auto.commit" -> {Boolean@809} true
+"sasl.mechanism" -> "GSSAPI"
+"interceptor.classes" -> {Collections$EmptyList@789}  size = 0
+"exclude.internal.topics" -> {Boolean@809} true
+"ssl.truststore.password" -> null
+"client.id" -> ""
+"default.api.timeout.ms" -> {Integer@818} 60000
+"ssl.endpoint.identification.algorithm" -> "https"
+"max.poll.records" -> {Integer@822} 500
+"check.crcs" -> {Boolean@809} true
+"request.timeout.ms" -> {Integer@825} 30000
+"sasl.login.refresh.buffer.seconds" -> {Short@827} 300
+"heartbeat.interval.ms" -> {Integer@829} 3000
+"auto.commit.interval.ms" -> {Integer@831} 1000
+"receive.buffer.bytes" -> {Integer@833} 65536
+"sasl.login.class" -> null
+"ssl.truststore.type" -> "JKS"
+"ssl.truststore.location" -> null
+"client.dns.lookup" -> "default"
+"ssl.keystore.password" -> null
+"fetch.min.bytes" -> {Integer@841} 1
+"fetch.max.bytes" -> {Integer@843} 52428800
+"send.buffer.bytes" -> {Integer@845} 131072
+"max.poll.interval.ms" -> {Integer@847} 300000
+"value.deserializer" -> {Class@690} "class org.apache.kafka.common.serialization.StringDeserializer"
+"sasl.login.refresh.window.factor" -> {Double@850} 0.8
+"sasl.login.refresh.min.period.seconds" -> {Short@852} 60
+"group.id" -> "DemoConsumer"
+"retry.backoff.ms" -> {Long@856} 100
+"ssl.secure.random.implementation" -> null
+"sasl.kerberos.kinit.cmd" -> "/usr/bin/kinit"
+"sasl.kerberos.service.name" -> null
+"sasl.kerberos.ticket.renew.jitter" -> {Double@862} 0.05
+"ssl.trustmanager.algorithm" -> "PKIX"
+"ssl.key.password" -> null
+"sasl.jaas.config" -> null
+"fetch.max.wait.ms" -> {Integer@868} 500
+"sasl.client.callback.handler.class" -> null
+"sasl.kerberos.min.time.before.relogin" -> {Long@871} 60000
+"connections.max.idle.ms" -> {Long@873} 540000
+"session.timeout.ms" -> {Integer@875} 30000
+"metrics.num.samples" -> {Integer@877} 2
+"internal.leave.group.on.close" -> {Boolean@809} true
+"key.deserializer" -> {Class@690} "class org.apache.kafka.common.serialization.StringDeserializer"
+"ssl.protocol" -> "TLS"
+"group.instance.id" -> null
+"ssl.provider" -> null
+"ssl.enabled.protocols" -> {Arrays$ArrayList@885}  size = 3
+"client.rack" -> ""
+"ssl.keystore.location" -> null
+"ssl.cipher.suites" -> null
+"security.protocol" -> "PLAINTEXT"
+"allow.auto.create.topics" -> {Boolean@809} true
+"ssl.keymanager.algorithm" -> "SunX509"
+"sasl.login.callback.handler.class" -> null
+"metrics.sample.window.ms" -> {Long@896} 30000
+"isolation.level" -> "read_uncommitted"
+"auto.offset.reset" -> "latest"
+"sasl.login.refresh.window.jitter" -> {Double@902} 0.05

@@ -1,0 +1,137 @@
+org.apache.flink.streaming.connectors.kafka.internal.FlinkKafkaInternalProducer
+
+org.apache.flink.streaming.connectors.kafka.internal.KafkaConsumerThread
+
+
+consumer configuraration
+"metric.reporters" -> {Collections$EmptyList@6330}  size = 0
+"metadata.max.age.ms" -> {Long@6332} 300000
+"reconnect.backoff.max.ms" -> {Long@6334} 1000
+"partition.assignment.strategy" -> {Collections$SingletonList@6336}  size = 1
+"reconnect.backoff.ms" -> {Long@6338} 50
+"sasl.kerberos.ticket.renew.window.factor" -> {Double@6340} 0.8
+"max.partition.fetch.bytes" -> {Integer@6342} 1048576
+"bootstrap.servers" -> {Arrays$ArrayList@6343}  size = 1
+"metrics.recording.level" -> "INFO"
+"ssl.keystore.type" -> "JKS"
+"enable.auto.commit" -> {Boolean@6349} true
+"sasl.mechanism" -> "GSSAPI"
+"interceptor.classes" -> {Collections$EmptyList@6330}  size = 0
+"exclude.internal.topics" -> {Boolean@6349} true
+"ssl.truststore.password" -> null
+"client.id" -> ""
+"default.api.timeout.ms" -> {Integer@6358} 60000
+"ssl.endpoint.identification.algorithm" -> "https"
+"max.poll.records" -> {Integer@6362} 500
+"check.crcs" -> {Boolean@6349} true
+"request.timeout.ms" -> {Integer@6365} 30000
+"sasl.login.refresh.buffer.seconds" -> {Short@6367} 300
+"heartbeat.interval.ms" -> {Integer@6369} 3000
+"auto.commit.interval.ms" -> {Integer@6371} 5000
+"receive.buffer.bytes" -> {Integer@6373} 65536
+"sasl.login.class" -> null
+"ssl.truststore.type" -> "JKS"
+"ssl.truststore.location" -> null
+"client.dns.lookup" -> "default"
+"ssl.keystore.password" -> null
+"fetch.min.bytes" -> {Integer@6381} 1
+"fetch.max.bytes" -> {Integer@6383} 52428800
+"send.buffer.bytes" -> {Integer@6385} 131072
+"max.poll.interval.ms" -> {Integer@6387} 300000
+"value.deserializer" -> {Class@6240} "class org.apache.kafka.common.serialization.ByteArrayDeserializer"
+"sasl.login.refresh.window.factor" -> {Double@6390} 0.8
+"sasl.login.refresh.min.period.seconds" -> {Short@6392} 60
+"group.id" -> "flink_consumer4"
+"retry.backoff.ms" -> {Long@6396} 100
+"ssl.secure.random.implementation" -> null
+"sasl.kerberos.kinit.cmd" -> "/usr/bin/kinit"
+"sasl.kerberos.service.name" -> null
+"sasl.kerberos.ticket.renew.jitter" -> {Double@6402} 0.05
+"ssl.trustmanager.algorithm" -> "PKIX"
+"ssl.key.password" -> null
+"sasl.jaas.config" -> null
+"fetch.max.wait.ms" -> {Integer@6408} 500
+"sasl.client.callback.handler.class" -> null
+"sasl.kerberos.min.time.before.relogin" -> {Long@6411} 60000
+"connections.max.idle.ms" -> {Long@6413} 540000
+"session.timeout.ms" -> {Integer@6415} 10000
+"metrics.num.samples" -> {Integer@6417} 2
+"internal.leave.group.on.close" -> {Boolean@6349} true
+"key.deserializer" -> {Class@6240} "class org.apache.kafka.common.serialization.ByteArrayDeserializer"
+"ssl.protocol" -> "TLS"
+"ssl.provider" -> null
+"ssl.enabled.protocols" -> {Arrays$ArrayList@6424}  size = 3
+"ssl.keystore.location" -> null
+"ssl.cipher.suites" -> null
+"security.protocol" -> "PLAINTEXT"
+"ssl.keymanager.algorithm" -> "SunX509"
+"sasl.login.callback.handler.class" -> null
+"metrics.sample.window.ms" -> {Long@6433} 30000
+"isolation.level" -> "read_uncommitted"
+"auto.offset.reset" -> "latest"
+"sasl.login.refresh.window.jitter" -> {Double@6439} 0.05
+
+
+consumer
+"metric.reporters" -> {Collections$EmptyList@6330}  size = 0
+"metadata.max.age.ms" -> {Long@6606} 300000
+"reconnect.backoff.max.ms" -> {Long@6607} 1000
+"reconnect.backoff.ms" -> {Long@6338} 50
+"sasl.kerberos.ticket.renew.window.factor" -> {Double@6608} 0.8
+"bootstrap.servers" -> {Arrays$ArrayList@6609}  size = 1
+"metrics.recording.level" -> "INFO"
+"ssl.keystore.type" -> "JKS"
+"sasl.mechanism" -> "GSSAPI"
+"max.block.ms" -> {Long@6611} 60000
+"interceptor.classes" -> {Collections$EmptyList@6330}  size = 0
+"ssl.truststore.password" -> null
+"client.id" -> ""
+"ssl.endpoint.identification.algorithm" -> "https"
+"request.timeout.ms" -> {Integer@6612} 30000
+"sasl.login.refresh.buffer.seconds" -> {Short@6613} 300
+"acks" -> "1"
+"transaction.timeout.ms" -> {Integer@6615} 3600000
+"receive.buffer.bytes" -> {Integer@6616} 32768
+"sasl.login.class" -> null
+"ssl.truststore.type" -> "JKS"
+"retries" -> {Integer@6618} 2147483647
+"ssl.truststore.location" -> null
+"client.dns.lookup" -> "default"
+"ssl.keystore.password" -> null
+"send.buffer.bytes" -> {Integer@6619} 131072
+"compression.type" -> "none"
+"enable.idempotence" -> {Boolean@6623} false
+"sasl.login.refresh.window.factor" -> {Double@6624} 0.8
+"sasl.login.refresh.min.period.seconds" -> {Short@6392} 60
+"delivery.timeout.ms" -> {Integer@6626} 120000
+"retry.backoff.ms" -> {Long@6396} 100
+"ssl.secure.random.implementation" -> null
+"sasl.kerberos.kinit.cmd" -> "/usr/bin/kinit"
+"buffer.memory" -> {Long@6628} 33554432
+"key.serializer" -> {Class@6243} "class org.apache.kafka.common.serialization.ByteArraySerializer"
+"sasl.kerberos.service.name" -> null
+"sasl.kerberos.ticket.renew.jitter" -> {Double@6629} 0.05
+"transactional.id" -> null
+"ssl.trustmanager.algorithm" -> "PKIX"
+"ssl.key.password" -> null
+"sasl.jaas.config" -> null
+"sasl.client.callback.handler.class" -> null
+"sasl.kerberos.min.time.before.relogin" -> {Long@6631} 60000
+"connections.max.idle.ms" -> {Long@6632} 540000
+"max.in.flight.requests.per.connection" -> {Integer@6634} 5
+"metrics.num.samples" -> {Integer@6417} 2
+"ssl.protocol" -> "TLS"
+"ssl.provider" -> null
+"ssl.enabled.protocols" -> {Arrays$ArrayList@6635}  size = 3
+"batch.size" -> {Integer@6637} 16384
+"ssl.keystore.location" -> null
+"ssl.cipher.suites" -> null
+"security.protocol" -> "PLAINTEXT"
+"max.request.size" -> {Integer@6639} 1048576
+"value.serializer" -> {Class@6243} "class org.apache.kafka.common.serialization.ByteArraySerializer"
+"ssl.keymanager.algorithm" -> "SunX509"
+"sasl.login.callback.handler.class" -> null
+"metrics.sample.window.ms" -> {Long@6640} 30000
+"partitioner.class" -> {Class@6464} "class org.apache.kafka.clients.producer.internals.DefaultPartitioner"
+"sasl.login.refresh.window.jitter" -> {Double@6642} 0.05
+"linger.ms" -> {Integer@6644} 0
