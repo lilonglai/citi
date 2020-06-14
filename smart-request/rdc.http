@@ -1,0 +1,86 @@
+#oauth
+post http://smart-rest-service.euricgrdc11p.eur.nsroot.net/v1/oauth/token http/1.1
+Content-Type: application/json
+
+{
+    "clientId": "173448_Smart_test",
+    "clientSecret": "XXX"
+}
+
+
+#frozen account
+post http://smart-rest-service.euricgrdc11p.eur.nsroot.net/v1/check/xml http/1.1
+Content-Type: application/x-www-form-urlencoded
+Authorization: "XXX"
+
+request=
+<SMaRTRequest version="1.0">
+    <header>
+        <conversationId></conversationId>
+        <appId>156752</appId>
+        <appName>PFS</appName>
+        <requestPerson>156752</requestPerson>
+        <realTimeRefData>N</realTimeRefData>
+    </header>
+    <checks>
+        <p n="FROZEN_ACCOUNT">Y</p>
+    </checks>
+</SMaRTRequest>
+&entity=
+<SMaRTEntities version="1.0">
+    <entity>
+        <identity>
+            <p n="ENTITY_ID">entity_1</p>
+        </identity>
+        <metadata>
+            <p n="MARKET">EQUITY</p>
+            <p n="FINANCIAL_INSTRUMENT">DERV</p>
+            <p n="TRADING_CAPACITY">DEAL</p>
+            <p n="AS_OF_DATE">20200317</p>
+        </metadata>
+        <props>
+            <p n="FIRM_ACCOUNT">JBE1</p>
+        </props>
+
+    </entity>
+</SMaRTEntities>
+
+
+#size control
+post http://smart-rest-service.euricgrdc11p.eur.nsroot.net/v1/check/json http/1.1
+Content-Type: application/json
+Authorization: "XXX"
+
+{
+    "version": "1",
+    "entity": [
+        {
+            "metadata":[
+                {
+                    "name": "HOST_LOCATION",
+                    "value": "EMEA"
+                },
+                {
+                    "name": "BRANCH_NAME",
+                    "value": "LONDON TEST BRANCH"
+                },
+                {
+                    "name": "PRODUCT_TYPE",
+                    "value": "FX_FWD"
+                },
+                {
+                    "name": "FX_SPOT_RATE_DEAL",
+                    "value": "1.1351"
+                },
+                {
+                    "name": "FX_SPOT_RATE_COVER",
+                    "value": "1.1351"
+                },
+                {
+                    "name": "FX_POINTS_DEAL",
+                    "value": "0.0"
+                },
+            ]
+        }
+    ]    
+}
